@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Question 2 - Text Blender</title>
+	<link rel="stylesheet" href="question2.css">
+</head>
+<body>
+	<div class="panel">
+		<h1>Mr. Surname Blender</h1>
+
+		<div class="controls">
+			<div class="field row">
+				<span>Surname:</span>
+				<input id="surname" type="text" size="20" placeholder="Enter surname" value="Mokoena">
+			</div>
+
+			<div class="field row">
+				<span>Font:</span>
+				<select id="font" title="Font" aria-label="Font">
+					<option>Arial</option>
+					<option>Comic Sans MS</option>
+					<option selected>Times New Roman</option>
+				</select>
+				<select id="color-select" title="Color" aria-label="Color">
+					<option value="black">Black</option>
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+					<option value="green">Green</option>
+				</select>
+			</div>
+
+			<div class="field row">
+				<span>Position:</span>
+				<div class="radio-row">
+					<label><input id="sequential" surname="pos" name="pos" type="radio" value="seq" checked="checked"> Sequential</label>
+					<label><input id="random" surname="pos" name="pos" type="radio" value="rand"> Random</label>
+					<label><input id="reverse" surname="pos" name="pos" type="radio" value="rev"> Reverse</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="extras">
+			<div class="field row">
+				<label for="font-size-input">Font size (pixels)</label>
+				<input id="font-size-input" type="number" min="8" max="80" placeholder="font size" value="16">
+			</div>
+
+			<div class="field row">
+				<label for="color-picker">Color picker</label>
+				<input id="color-picker" type="color" value="#000000">
+			</div>
+
+			<div class="field row">
+				<label for="spacing-slider">Letter spacing slider</label>
+				<input id="spacing-slider" type="range" min="10" max="40" value="15">
+				<span class="slider-value" id="spacing-value">15 px</span>
+			</div>
+
+			<div class="field row">
+				<label for="letter-size-slider">Letter size slider</label>
+				<input id="letter-size-slider" type="range" min="10" max="72" value="16">
+				<span class="slider-value" id="letter-size-value">16 px</span>
+			</div>
+
+			<div class="field row">
+				<label for="box-width-slider">Display box width slider</label>
+				<input id="box-width-slider" type="range" min="320" max="700" value="320">
+				<span class="slider-value" id="box-width-value">320 px</span>
+			</div>
+		</div>
+
+		<div class="field row action-row">
+			<button id="apply-style" type="button">Apply style</button>
+		</div>
+
+		<div class="field row action-row">
+			<span>Go</span>
+			<button id="blend-now" type="button">Blend Now</button>
+		</div>
+
+		<div id="output" aria-label="Output area"></div>
+	</div>
+
+	<script src="question2.js"></script>
+</body>
+</html>

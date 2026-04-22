@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	background: #ffffff;
+	color: #222;
+}
+
+.panel {
+	max-width: 360px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #d0d0d0;
+	padding: 10px;
+}
+
+h1 {
+	margin: 0 0 8px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	border: 1px solid #999;
+	padding: 3px;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 8px;
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.row > span,
+.row > label {
+	width: 58px;
+	font-size: 12px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+button {
+	padding: 1px 4px;
+	border: 1px solid #999;
+	border-radius: 0;
+	font: 12px Arial, sans-serif;
+	height: 22px;
+}
+
+input[type="text"] {
+	flex: 1;
+}
+
+input[type="number"] {
+	width: 70px;
+}
+
+select {
+	width: 95px;
+}
+
+.radio-row {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.radio-row label {
+	font-size: 11px;
+	white-space: nowrap;
+}
+
+.radio-row input[type="radio"] {
+	margin-right: 2px;
+}
+
+.extras {
+	margin: 8px 0;
+	padding-top: 8px;
+	border-top: 1px dashed #ccc;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.slider-value {
+	font-size: 11px;
+	color: #666;
+}
+
+.action-row {
+	margin-bottom: 6px;
+}
+
+#apply-style {
+	background: #efefef;
+	color: #222;
+	cursor: pointer;
+}
+
+#blend-now {
+	background: #73b95c;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+#output {
+	position: relative;
+	width: 320px;
+	height: 120px;
+	border: 1px solid #f0b98b;
+	background: #fff;
+	overflow: hidden;
+	margin-left: 58px;
+}
+
+.letter {
+	position: absolute;
+	line-height: 1;
+	font-weight: 700;
+}
+
+@media (max-width: 700px) {
+	body {
+		padding: 12px;
+	}
+
+	.panel {
+		max-width: 100%;
+	}
+
+	#output {
+		margin-left: 0;
+		width: 100%;
+		max-width: 320px;
+	}
+}
