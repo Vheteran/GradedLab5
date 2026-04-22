@@ -1,0 +1,133 @@
+:root {
+	--bg: #f4efe6;
+	--card: #fffdf8;
+	--text: #2d2418;
+	--accent: #8b5e34;
+	--accent-dark: #5f3f22;
+	--line: #d7c7b1;
+	--ok: #2e7d32;
+	--bad: #b71c1c;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Georgia, "Times New Roman", serif;
+	min-height: 100vh;
+	background: radial-gradient(circle at top, #fffaf1 0%, var(--bg) 60%, #e8dccb 100%);
+	color: var(--text);
+	display: grid;
+	place-items: center;
+	padding: 16px;
+}
+
+#app-shell {
+	width: min(96vw, 460px);
+	background: var(--card);
+	border: 2px solid var(--line);
+	border-radius: 12px;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+	overflow: hidden;
+	padding: 16px;
+	display: grid;
+	gap: 12px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+#app-shell > p {
+	text-align: center;
+	font-style: italic;
+}
+
+#car-info {
+	display: grid;
+	gap: 8px;
+}
+
+#car-info h2 {
+	text-align: center;
+	font-size: 1.05rem;
+	padding: 8px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: #fff7ea;
+}
+
+#car-img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: #f7f1e8;
+}
+
+.hidden {
+	display: none;
+}
+
+#guess-ui {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 8px;
+	align-items: center;
+}
+
+#guess-ui label {
+	font-weight: 700;
+}
+
+#make-list,
+#guess-btn {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 8px;
+	font-size: 0.95rem;
+	font-family: inherit;
+}
+
+#guess-btn {
+	background: var(--accent);
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+#guess-btn:hover {
+	background: var(--accent-dark);
+}
+
+#guess-btn.disabled {
+	opacity: 0.45;
+	pointer-events: none;
+}
+
+#feedback {
+	min-height: 1.2em;
+	font-weight: 700;
+	text-align: center;
+}
+
+#feedback.ok {
+	color: var(--ok);
+}
+
+#feedback.bad {
+	color: var(--bad);
+}
+
+#scoreboard {
+	display: grid;
+	gap: 4px;
+	text-align: center;
+	border-top: 1px solid var(--line);
+	padding-top: 10px;
+}

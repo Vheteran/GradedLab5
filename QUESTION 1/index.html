@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vintage Cars</title>
+	<link href="cars.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="app-shell">
+		<h1>Vintage Cars</h1>
+		<p>Guess which car belongs to which make?</p>
+
+		<div id="car-info">
+			<h2><span id="car-type"></span></h2>
+			<img class="hidden" id="car-img" src="" alt="vintage car image">
+		</div>
+
+		<div id="guess-ui">
+			<label for="make-list">Make:</label>
+			<select id="make-list"></select>
+			<button class="disabled" id="guess-btn" type="button">Guess</button>
+		</div>
+
+		<p id="feedback"></p>
+
+		<div id="scoreboard">
+			<p>Correct guesses: <span id="count">0</span></p>
+			<p>Total guesses: <span id="total">0</span></p>
+		</div>
+	</div>
+
+	<script src="cars.js"></script>
+</body>
+</html>
